@@ -13,9 +13,6 @@ function map2Set(map) {
     return vals
 }
 
-function allEven(set) {
-    
-}
 
 function canBePalendrome(str) {
 
