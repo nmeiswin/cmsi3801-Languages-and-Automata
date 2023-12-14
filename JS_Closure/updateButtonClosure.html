@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Click Counter</title>
+</head>
+<body>
+
+<button id="clickButton">click me</button>
+<p id="clickCount">Click count: 0</p>
+
+<script>
+(function() {
+  // Outer function to create a closure
+  let clickCount = 0;
+
+  // Inner function returned by the outer function
+  function updateClickCount() {
+    clickCount++;
+    document.getElementById('clickCount').innerText = 'Click count: ' + clickCount;
+  }
+
+  // Attach the inner function to the button click event
+  document.getElementById('clickButton').onclick = updateClickCount;
+})();
+</script>
+
+</body>
+</html>
